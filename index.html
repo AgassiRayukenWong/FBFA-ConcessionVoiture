@@ -36,8 +36,12 @@
     <div class="grid-container" id="grid-container-coupes">
     </div>
 
+    <h2>Sportives Classiques</h2>
+    <div class="grid-container" id="grid-container-sportivesclassiques">
+    </div>
+
     <script>
-        // Les données CSV
+
         const dataSedans = [
             {"brand": "N/A", "model": "Asea", "price": 15300, "photo": "", "category": "Sedans", "weight": 0},
             {"brand": "N/A", "model": "Ariant", "price": 40800, "photo": "", "category": "Sedans", "weight": 0},
@@ -99,7 +103,50 @@
             {"brand": "N/A", "model": "FR36", "price": 122400, "photo": "", "category": "Coupés", "weight": 0},
         ];
 
-        // Fonction pour créer une carte de véhicule
+        const dataSportivesClassiques = [
+            {"brand": "N/A", "model": "Casco", "price": 326400, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Cheburek", "price": 76500, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Cheetah Classic", "price": 826200, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Coquette Classic", "price": 459000, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Dynasty", "price": 56100, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Fagaloa", "price": 35700, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Infernus Classic", "price": 663000, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Mamba", "price": 382500, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Manana", "price": 25500, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Michelli GT", "price": 63240, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Monroe", "price": 286600, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Nebula Turbo", "price": 76500, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Peyote", "price": 32640, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Peyote Custom", "price": 45900, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Pigalle", "price": 22440, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Rapid GT Classic", "price": 175440, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Retinue", "price": 61200, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Retinue MK II", "price": 71400, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Roosevelt", "price": 438600, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Roosevelt Valor", "price": 550800, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Stinger", "price": 423300, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Stinger GT", "price": 530400, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Stirling GT", "price": 311100, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Torero", "price": 428400, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Tornado Custom", "price": 40800, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Tornado Rouillé", "price": 18360, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Turismo Classic", "price": 484500, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Zion Classic", "price": 163200, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Z-Type", "price": 790500, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Fränken Stange", "price": 67320, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "GT 500", "price": 74460, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "JB 700W", "price": 42840, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Savestra", "price": 35700, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Swinger", "price": 122400, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Tornado", "price": 12240, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Tornado Cabrio", "price": 14280, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Tornado Cabrio Rouillé", "price": 15300, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Tornado Rat-rod", "price": 15810, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "Viseris", "price": 46920, "photo": "", "category": "Sportives Classiques", "weight": 0},
+            {"brand": "N/A", "model": "190Z", "price": 34680, "photo": "", "category": "Sportives Classiques", "weight": 0},
+        ];
+
+
         function createVehicleCard(vehicle) {
             return `
                 <div class="grid-item">
@@ -113,7 +160,6 @@
             `;
         }
 
-        // Insérer les cartes des véhicules dans la grille
         const gridContainerSedans = document.getElementById('grid-container-sedans');
         dataSedans.forEach(vehicle => {
             gridContainerSedans.innerHTML += createVehicleCard(vehicle);
@@ -123,6 +169,12 @@
         dataCoupes.forEach(vehicle => {
             gridContainerCoupes.innerHTML += createVehicleCard(vehicle);
         });
+
+        const gridContainerSportivesclassiques = document.getElementById('grid-container-sportivesclassiques');
+        dataSportivesClassiques.forEach(vehicle => {
+            gridContainerSportivesclassiques.innerHTML += createVehicleCard(vehicle);
+        });
+
     </script>
 </body>
 </html>
