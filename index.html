@@ -27,8 +27,13 @@
 </head>
 <body>
     <h1>Catalogue de Véhicules</h1>
+
+    <h2>Sedans</h2>
     <div class="grid-container" id="grid-container-sedans">
-        <!-- Les cartes des véhicules seront insérées ici par JavaScript -->
+    </div>
+
+    <h2>Coupés</h2>
+    <div class="grid-container" id="grid-container-coupes">
     </div>
 
     <script>
@@ -72,6 +77,28 @@
             {"brand": "N/A", "model": "Asterope GZ", "price": 32640, "photo": "", "category": "Sedans", "weight": 0},
         ];
 
+        const dataCoupes = [
+            {"brand": "N/A", "model": "Cognosenti Cabrio", "price": 81600, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Exemplar", "price": 183600, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "F620", "price": 71400, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Felon", "price": 71400, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Felon GT", "price": 81600, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Jackal", "price": 61200, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Oracle", "price": 40800, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Oracle XS", "price": 51000, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Previon", "price": 25500, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Sentinel", "price": 35700, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Sentinel XS", "price": 40800, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Windsor", "price": 204000, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Windsor Drop", "price": 234600, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Zion", "price": 35700, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Zion Cabrio", "price": 40800, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Kanjo Sj", "price": 10200, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "Postlude", "price": 7140, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "FR36 Drift", "price": 112200, "photo": "", "category": "Coupés", "weight": 0},
+            {"brand": "N/A", "model": "FR36", "price": 122400, "photo": "", "category": "Coupés", "weight": 0},
+        ];
+
         // Fonction pour créer une carte de véhicule
         function createVehicleCard(vehicle) {
             return `
@@ -87,9 +114,14 @@
         }
 
         // Insérer les cartes des véhicules dans la grille
-        const gridContainer = document.getElementById('grid-container-sedans');
+        const gridContainerSedans = document.getElementById('grid-container-sedans');
         dataSedans.forEach(vehicle => {
-            gridContainer.innerHTML += createVehicleCard(vehicle);
+            gridContainerSedans.innerHTML += createVehicleCard(vehicle);
+        });
+
+        const gridContainerCoupes = document.getElementById('grid-container-coupes');
+        dataCoupes.forEach(vehicle => {
+            gridContainerCoupes.innerHTML += createVehicleCard(vehicle);
         });
     </script>
 </body>
