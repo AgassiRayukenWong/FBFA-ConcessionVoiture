@@ -40,6 +40,26 @@
     <div class="grid-container" id="grid-container-sportivesclassiques">
     </div>
 
+    <h2>SUV</h2>
+    <div class="grid-container" id="grid-container-SUV">
+    </div>
+
+    <h2>Off Roads</h2>
+    <div class="grid-container" id="grid-container-offroads">
+    </div>
+
+    <h2>Compacts</h2>
+    <div class="grid-container" id="grid-container-compacts">
+    </div>
+
+    <h2>Muscles</h2>
+    <div class="grid-container" id="grid-container-muscles">
+    </div>
+    
+    <h2>Super</h2>
+    <div class="grid-container" id="grid-container-super">
+    </div>
+
     <script>
 
         const dataSedans = [
@@ -146,6 +166,176 @@
             {"brand": "N/A", "model": "190Z", "price": 34680, "photo": "", "category": "Sportives Classiques", "weight": 0},
         ];
 
+        const dataSUV = [
+            {"brand": "N/A", "model": "Baller", "price": 45900, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Baller ST", "price": 91800, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Baller II", "price": 275400, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Baller LWB", "price": 117300, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Baller Sport", "price": 132600, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "BeeJay XL", "price": 45900, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Cavalcade", "price": 40800, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Cavalcade II", "price": 45900, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Contender", "price": 153000, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Dubsta", "price": 153000, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Dubsta Luxury", "price": 204000, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Fathom", "price": 51000, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Granger", "price": 66300, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Granger 3600LX", "price": 204000, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Gresley", "price": 51000, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Habanero", "price": 28560, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Huntley S", "price": 61200, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Landstalker", "price": 40800, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Landstalker XL", "price": 51000, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Mesa", "price": 45900, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Novak", "price": 234600, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Patriot", "price": 71400, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Patriot Mil-Spec", "price": 663000, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Patriot Limo", "price": 40800, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Radius", "price": 28560, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Rebla GTS", "price": 255000, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Rocoto", "price": 81600, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Sadler", "price": 45900, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Seminole", "price": 40800, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Seminole Frontier", "price": 51000, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Serrano", "price": 28560, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Toros", "price": 561000, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Astron", "price": 336600, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "XLS", "price": 153000, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Streiter", "price": 153000, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Jubilee", "price": 326400, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Gresleyh", "price": 112200, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Issi Rally", "price": 224400, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "I-Wagen", "price": 484500, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Aleutian", "price": 122400, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Baller ST-D", "price": 107100, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Cavalcade XL", "price": 260100, "photo": "", "category": "SUV", "weight": 0},
+            {"brand": "N/A", "model": "Dorado", "price": 81600, "photo": "", "category": "SUV", "weight": 0},
+        ];
+
+        const dataOffRoads = [
+            {"brand": "N/A", "model": "Bf Injection", "price": 9180, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Bifta", "price": 14280, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Bodhi", "price": 14280, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Brawler", "price": 12750, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Caracara 4x4", "price": 51000, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Dubsta 6x6", "price": 51000, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Dune Buggy", "price": 8160, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Duneloader", "price": 9180, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Everon", "price": 63240, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Freecrawler", "price": 45900, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Hellion", "price": 56100, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Kalahari", "price": 8160, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Kamacho", "price": 64260, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Mesa Trail", "price": 45900, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Outlaw", "price": 25500, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Rancher XL", "price": 28560, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Rebel Rouillé", "price": 9180, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Rebel", "price": 22440, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Riata", "price": 49980, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Sandking XL", "price": 51000, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Sandking", "price": 40800, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Trophy Truck", "price": 61200, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Buggy Raid", "price": 61200, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Vagrant", "price": 51000, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Winky", "price": 35700, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Yosemite Rancher", "price": 45900, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Draugur", "price": 71400, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Boor", "price": 99960, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Walton L35", "price": 76500, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "MonstroCiti", "price": 81600, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Ratel", "price": 81600, "photo": "", "category": "Off Roads", "weight": 0},
+            {"brand": "N/A", "model": "Terminus", "price": 183600, "photo": "", "category": "Off Roads", "weight": 0},
+        ];
+
+        const dataCompacts = [
+            {"brand": "N/A", "model": "Asbo", "price": 1020, "photo": "", "category": "Compacts", "weight": 0},
+            {"brand": "N/A", "model": "Blista", "price": 1530, "photo": "", "category": "Compacts", "weight": 0},
+            {"brand": "N/A", "model": "Brioso", "price": 4080, "photo": "", "category": "Compacts", "weight": 0},
+            {"brand": "N/A", "model": "Brioso 300", "price": 3060, "photo": "", "category": "Compacts", "weight": 0},
+            {"brand": "N/A", "model": "Brioso 300 Large", "price": 4080, "photo": "", "category": "Compacts", "weight": 0},
+            {"brand": "N/A", "model": "Club", "price": 4080, "photo": "", "category": "Compacts", "weight": 0},
+            {"brand": "N/A", "model": "Dilettante", "price": 4590, "photo": "", "category": "Compacts", "weight": 0},
+            {"brand": "N/A", "model": "Issi", "price": 4080, "photo": "", "category": "Compacts", "weight": 0},
+            {"brand": "N/A", "model": "Issi Classique", "price": 3570, "photo": "", "category": "Compacts", "weight": 0},
+            {"brand": "N/A", "model": "Kanjo", "price": 2040, "photo": "", "category": "Compacts", "weight": 0},
+            {"brand": "N/A", "model": "Panto", "price": 1020, "photo": "", "category": "Compacts", "weight": 0},
+            {"brand": "N/A", "model": "Prairie", "price": 4590, "photo": "", "category": "Compacts", "weight": 0},
+            {"brand": "N/A", "model": "Rhapsody", "price": 1020, "photo": "", "category": "Compacts", "weight": 0},
+            {"brand": "N/A", "model": "Weevil", "price": 3060, "photo": "", "category": "Compacts", "weight": 0},
+        ];
+
+        const dataMuscles = [
+            {"brand": "N/A", "model": "Blade", "price": 9180, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Buccaneer", "price": 20400, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Buccaneer Rider", "price": 25500, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Chino", "price": 32640, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Chino Luxe", "price": 40800, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Clique", "price": 102000, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Coquette BlackFin", "price": 76500, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Deviant", "price": 117300, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Dominator", "price": 57120, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Dominator GTT", "price": 96900, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Dominator GTX", "price": 132600, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Dominator ASP", "price": 81600, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Dukes", "price": 45900, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Ellie", "price": 86700, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Faction", "price": 20400, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Faction Rider", "price": 26520, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Faction XL", "price": 25500, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Gauntlet", "price": 20400, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Gauntlet Classic", "price": 51000, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Gauntlet Classic Custom", "price": 76500, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Gauntlet Hellfire", "price": 61200, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Hermes", "price": 66300, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Hotknife", "price": 40800, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Hustler", "price": 132600, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Impaler", "price": 13260, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Manana Custom", "price": 23460, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Nightshade", "price": 45900, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Phoenix", "price": 30600, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Picador", "price": 13260, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Rat-Truck", "price": 14280, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Ruiner", "price": 24480, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Sabre GT", "price": 18360, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Sabre Turbo", "price": 21420, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Slam Van", "price": 13260, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Slam Van Du Lost", "price": 23460, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Slam Van Custom", "price": 25500, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Stallion", "price": 30600, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Tampa", "price": 25500, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Tulip", "price": 23460, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Vamos", "price": 15300, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Virgo", "price": 11220, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Virgo Classic Custom", "price": 18360, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Vigero", "price": 35700, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Voodoo Custom", "price": 18360, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Yosemite", "price": 22440, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Ruiner ZZ-8", "price": 30600, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Bg Weebil Custom", "price": 15300, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Bravado Greenwood", "price": 25500, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Déclasse Viegro ZX", "price": 112200, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Broadway Classic", "price": 23460, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Dominator Pisswasser", "price": 50490, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Eudora", "price": 14280, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Gauntlet Redwood", "price": 43860, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Rat-Loader", "price": 8160, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Tahoma Coupé", "price": 40800, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Tulip M-100", "price": 33660, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Voodoo", "price": 18360, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Peyote Gasser", "price": 22440, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Virgo Classic", "price": 24480, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Brigham", "price": 30600, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Buffalo EVX", "price": 214200, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Clique Wagon", "price": 15300, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Dominator GT", "price": 224400, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Yosemite Drift", "price": 81600, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Impaler LX", "price": 40800, "photo": "", "category": "Muscles", "weight": 0},
+            {"brand": "N/A", "model": "Vigero ZX Convertible", "price": 163200, "photo": "", "category": "Muscles", "weight": 0},
+        ];
+
+        const dataSuper = [
+            
+        ];
 
         function createVehicleCard(vehicle) {
             return `
@@ -173,6 +363,26 @@
         const gridContainerSportivesclassiques = document.getElementById('grid-container-sportivesclassiques');
         dataSportivesClassiques.forEach(vehicle => {
             gridContainerSportivesclassiques.innerHTML += createVehicleCard(vehicle);
+        });
+
+        const gridContainerSUV = document.getElementById('grid-container-SUV');
+        dataSUV.forEach(vehicle => {
+            gridContainerSUV.innerHTML += createVehicleCard(vehicle);
+        });
+
+        const gridContainerOffRoads = document.getElementById('grid-container-offroads');
+        dataOffRoads.forEach(vehicle => {
+            gridContainerOffRoads.innerHTML += createVehicleCard(vehicle);
+        });
+
+        const gridContainerCompacts = document.getElementById('grid-container-compacts');
+        dataCompacts.forEach(vehicle => {
+            gridContainerCompacts.innerHTML += createVehicleCard(vehicle);
+        });
+
+        const gridContainerMuscles = document.getElementById('grid-container-muscles');
+        dataMuscles.forEach(vehicle => {
+            gridContainerMuscles.innerHTML += createVehicleCard(vehicle);
         });
 
     </script>
