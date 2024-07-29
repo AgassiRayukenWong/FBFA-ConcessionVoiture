@@ -60,6 +60,10 @@
     <div class="grid-container" id="grid-container-super">
     </div>
 
+    <h2>Sport</h2>
+    <div class="grid-container" id="grid-container-sport">
+    </div>
+
     <script>
 
         const dataSedans = [
@@ -337,6 +341,101 @@
             
         ];
 
+        const dataSport = [
+            {"brand": "", "model": "Drafter", "price": "275400", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "9F", "price": "397800", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "9F Cabrio", "price": "418200", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Alpha", "price": "867000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Banshee", "price": "214200", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Bestia GTS", "price": "255000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Blista Compact", "price": "561000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Buffalo", "price": "816000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Buffalo S", "price": "107100", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Buffalo STX", "price": "214200", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Calico GTF", "price": "112200", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Carbonizzare", "price": "285600", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Comet", "price": "285600", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Comet Retro Custom", "price": "306000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Comet SR", "price": "285600", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Comet S2", "price": "246840", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Comet Safari", "price": "374400", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Coquette", "price": "219000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Coquette D10", "price": "1244400", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Cypher", "price": "392700", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Elegy Retro Custom", "price": "448800", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Elegy RH8", "price": "828000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Euros", "price": "132600", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Feltzer", "price": "857000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Flash GT", "price": "357000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Furore GT", "price": "387600", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Fusilade", "price": "816000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Futo", "price": "714000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Futo GTX", "price": "867000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "GB200", "price": "102000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Growler", "price": "250200", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Imorgon", "price": "561000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Issi Sport", "price": "510000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Jester", "price": "489600", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Jester (Racecar)", "price": "561000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Jester Classic", "price": "724200", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Jester RR", "price": "385000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Jugular", "price": "846000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Khamelion", "price": "255000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Komoda", "price": "663000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Kuruma", "price": "484800", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Sunrise", "price": "1020000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Locust", "price": "255000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Lynx", "price": "255600", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Massacro", "price": "326400", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Massacro (Racecar)", "price": "382500", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Neo", "price": "204000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Paragon R", "price": "438600", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Pariah", "price": "642000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Penumbra", "price": "102000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Penumbra FF", "price": "1285200", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Raiden", "price": "714000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Rapid GT", "price": "153000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Rapid GT Convertible", "price": "178500", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Raptor", "price": "102000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Remus", "price": "765000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "RT3000", "price": "765000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Ruston", "price": "285600", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Schlagen", "price": "816000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Schwartzer", "price": "107100", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Sentinel Classic", "price": "173400", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Seven 70", "price": "264600", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Specter", "price": "204000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Specter Custom", "price": "255000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Sugoi", "price": "433500", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Sultan", "price": "178500", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Sultan Classic", "price": "147900", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Sultan RS Classic", "price": "275400", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Surano", "price": "122400", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Tampa Drift", "price": "367200", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Tropos", "price": "173400", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Vectre", "price": "290700", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Verlierer", "price": "142800", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "V-STR", "price": "214200", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "ZR350", "price": "126000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Sentinel Classique Large", "price": "175500", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Bénéfactore SM722", "price": "178500", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Corsita Lampadati", "price": "204000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Obey 10F", "price": "306000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Obey 10F Large", "price": "306000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Buffalo Sprunk", "price": "734400", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Hotring Everon", "price": "876000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Hotring Sabre", "price": "652800", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Panthere", "price": "480000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "300R", "price": "360000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Hotring Hellfire", "price": "112200", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Itali GTO Stinger TT", "price": "357000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Euros drift", "price": "714000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Futo GTX drift", "price": "714000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Jester RR drift", "price": "734400", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "Remus drift", "price": "552000", "photo": "", "category": "Sport", "weight": 0},
+            {"brand": "", "model": "ZR350 drift", "price": "1020000", "photo": "", "category": "Sport", "weight": 0},     
+        ];
+
         function createVehicleCard(vehicle) {
             return `
                 <div class="grid-item">
@@ -383,6 +482,11 @@
         const gridContainerMuscles = document.getElementById('grid-container-muscles');
         dataMuscles.forEach(vehicle => {
             gridContainerMuscles.innerHTML += createVehicleCard(vehicle);
+        });
+
+        const gridContainerSport = document.getElementById('grid-container-sport');
+        dataSport.forEach(vehicle => {
+            gridContainerSport.innerHTML += createVehicleCard(vehicle);
         });
 
     </script>
