@@ -700,11 +700,9 @@
         }
 
         function createVehicleCard(vehicle) {
-            const defaultImage = 'path/to/default/image.jpg'; // Replace with the path to your default image
-            const imageUrl = vehicle.photo ? vehicle.photo : defaultImage;
             return `
                 <div class="grid-item">
-                    <img src="${imageUrl}" alt="${vehicle.brand} ${vehicle.model}" onerror="this.src='${defaultImage}'">
+                    <img src='${vehicle.photo}' alt="${vehicle.brand} ${vehicle.model}">
                     <h4>${vehicle.brand}<br>${vehicle.model}</h4>
                     <p>Prix: ${vehicle.price} $</p>
                     <p>Catégorie: ${vehicle.category}</p>
