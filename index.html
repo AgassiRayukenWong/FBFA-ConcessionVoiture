@@ -26,38 +26,69 @@
     </style>
 </head>
 <body>
-    <h1>Grille de Véhicules</h1>
-    <div class="grid-container" id="grid-container">
+    <h1>Catalogue de Véhicules</h1>
+    <div class="grid-container" id="grid-container-sedans">
         <!-- Les cartes des véhicules seront insérées ici par JavaScript -->
     </div>
 
     <script>
         // Les données CSV
-        const data = [
-            {"marque": "Toyota", "modele": "Corolla", "prix": 25000, "photo": "http://example.com/toyota_corolla.jpg", "categorie": "Compact", "poidsCoffre": 450},
-            {"marque": "Honda", "modele": "Civic", "prix": 22000, "photo": "http://example.com/honda_civic.jpg", "categorie": "Compact", "poidsCoffre": 420},
-            {"marque": "Ford", "modele": "Focus", "prix": 21000, "photo": "http://example.com/ford_focus.jpg", "categorie": "Compact", "poidsCoffre": 400},
-            {"marque": "Chevrolet", "modele": "Malibu", "prix": 23000, "photo": "http://example.com/chevrolet_malibu.jpg", "categorie": "Midsize", "poidsCoffre": 500},
-            {"marque": "Nissan", "modele": "Altima", "prix": 24000, "photo": "http://example.com/nissan_altima.jpg", "categorie": "Midsize", "poidsCoffre": 470},
-            // Ajoutez d'autres entrées selon les données du fichier CSV
+        const dataSedans = [
+            {"brand": "N/A", "model": "Asea", "price": 15300, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Ariant", "price": 40800, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Asterope", "price": 35700, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Cognoscenti", "price": 91800, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Cognosenti 55", "price": 132600, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Emperor", "price": 18360, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Emperor Rouillé", "price": 5100, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Fugitive", "price": 40800, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Glendale", "price": 32640, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Glendale Custom", "price": 45900, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Ingot", "price": 16320, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Intruder", "price": 29580, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Premier", "price": 23460, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Primo", "price": 16320, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Primo Custom", "price": 56100, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Regina", "price": 16320, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Shafter", "price": 61200, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Shafter LWB", "price": 71400, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Shafter V12", "price": 81600, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Stafford", "price": 561000, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Stanier", "price": 23460, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Stratum", "price": 15300, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Stretch", "price": 408000, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Super Diamond", "price": 234600, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Surge", "price": 18360, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Tailgater", "price": 86700, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Tailgater S", "price": 183600, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Warrener", "price": 30600, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Warrener HKR", "price": 45900, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Washington", "price": 71400, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Cinquemila", "price": 255000, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Deity", "price": 357000, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Ubermarcht Rhinehart", "price": 112200, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Seraph", "price": 81600, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Sharmann", "price": 102000, "photo": "", "category": "Sedans", "weight": 0},
+            {"brand": "N/A", "model": "Asterope GZ", "price": 32640, "photo": "", "category": "Sedans", "weight": 0},
         ];
 
         // Fonction pour créer une carte de véhicule
         function createVehicleCard(vehicle) {
             return `
                 <div class="grid-item">
-                    <img src="${vehicle.photo}" alt="${vehicle.marque} ${vehicle.modele}">
-                    <h2>${vehicle.marque} ${vehicle.modele}</h2>
-                    <p>Prix: ${vehicle.prix} €</p>
-                    <p>Catégorie: ${vehicle.categorie}</p>
-                    <p>Poids du coffre: ${vehicle.poidsCoffre} kg</p>
+                    <!-- <img src="${vehicle.photo}" alt="${vehicle.brand} ${vehicle.model}"> -->
+                    <!-- <h2>${vehicle.brand} ${vehicle.model}</h2> -->
+                    <h2>${vehicle.model}</h2>
+                    <p>Prix: ${vehicle.price} $</p>
+                    <p>Catégorie: ${vehicle.category}</p>
+                    <p>Poids du coffre: ${vehicle.weight} kg</p>
                 </div>
             `;
         }
 
         // Insérer les cartes des véhicules dans la grille
-        const gridContainer = document.getElementById('grid-container');
-        data.forEach(vehicle => {
+        const gridContainer = document.getElementById('grid-container-sedans');
+        dataSedans.forEach(vehicle => {
             gridContainer.innerHTML += createVehicleCard(vehicle);
         });
     </script>
