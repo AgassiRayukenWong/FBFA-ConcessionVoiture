@@ -1,0 +1,11 @@
+marque,modele,prix,photo,categorie,poidsCoffre
+Toyota,Corolla,25000,http://example.com/toyota_corolla.jpg,Compact,450
+Honda,Civic,22000,http://example.com/honda_civic.jpg,Compact,420
+Ford,Focus,21000,http://example.com/ford_focus.jpg,Compact,400
+Chevrolet,Malibu,23000,http://example.com/chevrolet_malibu.jpg,Midsize,500
+Nissan,Altima,24000,http://example.com/nissan_altima.jpg,Midsize,470
+BMW,320i,35000,http://example.com/bmw_320i.jpg,Luxury,380
+Mercedes,C-Class,40000,http://example.com/mercedes_c_class.jpg,Luxury,360
+Volkswagen,Golf,27000,http://example.com/volkswagen_golf.jpg,Hatchback,430
+Audi,A4,33000,http://example.com/audi_a4.jpg,Sedan,410
+Kia,Soul,19000,http://example.com/kia_soul.jpg,SUV,520

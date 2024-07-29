@@ -1,8 +1,65 @@
-<html>
- <head>
-  <title>PHP Test</title>
- </head>
- <body>
-  <p>Hello Friend</p>
- </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grille de Véhicules</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .grid-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grille de Véhicules</h1>
+    <div class="grid-container" id="grid-container">
+        <!-- Les cartes des véhicules seront insérées ici par JavaScript -->
+    </div>
+
+    <script>
+        // Les données CSV
+        const data = [
+            {"marque": "Toyota", "modele": "Corolla", "prix": 25000, "photo": "http://example.com/toyota_corolla.jpg", "categorie": "Compact", "poidsCoffre": 450},
+            {"marque": "Honda", "modele": "Civic", "prix": 22000, "photo": "http://example.com/honda_civic.jpg", "categorie": "Compact", "poidsCoffre": 420},
+            {"marque": "Ford", "modele": "Focus", "prix": 21000, "photo": "http://example.com/ford_focus.jpg", "categorie": "Compact", "poidsCoffre": 400},
+            {"marque": "Chevrolet", "modele": "Malibu", "prix": 23000, "photo": "http://example.com/chevrolet_malibu.jpg", "categorie": "Midsize", "poidsCoffre": 500},
+            {"marque": "Nissan", "modele": "Altima", "prix": 24000, "photo": "http://example.com/nissan_altima.jpg", "categorie": "Midsize", "poidsCoffre": 470},
+            // Ajoutez d'autres entrées selon les données du fichier CSV
+        ];
+
+        // Fonction pour créer une carte de véhicule
+        function createVehicleCard(vehicle) {
+            return `
+                <div class="grid-item">
+                    <img src="${vehicle.photo}" alt="${vehicle.marque} ${vehicle.modele}">
+                    <h2>${vehicle.marque} ${vehicle.modele}</h2>
+                    <p>Prix: ${vehicle.prix} €</p>
+                    <p>Catégorie: ${vehicle.categorie}</p>
+                    <p>Poids du coffre: ${vehicle.poidsCoffre} kg</p>
+                </div>
+            `;
+        }
+
+        // Insérer les cartes des véhicules dans la grille
+        const gridContainer = document.getElementById('grid-container');
+        data.forEach(vehicle => {
+            gridContainer.innerHTML += createVehicleCard(vehicle);
+        });
+    </script>
+</body>
 </html>
