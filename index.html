@@ -43,6 +43,11 @@
 <body>
     <h1>Catalogue de Véhicules</h1>
 
+    <input type="text" id="searchBar" onkeyup="searchVehicles()" placeholder="Rechercher par marque ou modèle...">
+
+    <button class="toggle-all-btn" onclick="toggleAllVisibility(true)">Tout Déplier</button>
+    <button class="toggle-all-btn" onclick="toggleAllVisibility(false)">Tout Replier</button>
+    
     <h2>Sedans</h2>
     <button class="toggle-btn" onclick="toggleVisibility('grid-container-sedans')">Afficher Sedans</button>
     <div class="grid-container" id="grid-container-sedans">
@@ -102,6 +107,13 @@
     <div class="grid-container" id="grid-container-vans">
         <!-- Content for Vans -->
     </div>
+
+    <h2>Motos</h2>
+    <button class="toggle-btn" onclick="toggleVisibility('grid-container-motos')">Afficher Motos</button>
+    <div class="grid-container" id="grid-container-motos">
+        <!-- Content for Motos -->
+    </div>
+
 <script>
 
         const dataSedans = [
@@ -560,6 +572,89 @@
             {"brand": "N/A", "model": "Coureur", "price": 382500, "photo": "", "category": "Vans", "weight": 0},
         ];
 
+        const dataMotos = [
+            {"brand": "N/A", "model": "Akuma", "price": 105000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Avarus", "price": 37000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Bagger", "price": 16000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Bati 801", "price": 80000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Bati 801RR", "price": 83000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "BF400", "price": 39000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Carbon RS", "price": 55000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Chimera", "price": 21000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Cliffhanger", "price": 45000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Daemon", "price": 25000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Daemon Custom", "price": 28000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Defiler", "price": 50000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Diabolus", "price": 35000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Diabolus Custom", "price": 42000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Double-T", "price": 50000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Enduro", "price": 34000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Esskey", "price": 30000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Faggio Sport", "price": 4000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Faggio", "price": 2500, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Faggio Mod", "price": 3000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "FCR 1000", "price": 24000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "FCR 1000 Custom", "price": 30000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Gargoyle", "price": 55000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Hakuchou", "price": 97000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Hakuchou Drag", "price": 150000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Hexer", "price": 23000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Innovation", "price": 35000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Manchez", "price": 40000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Manchez Scout C", "price": 43000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "PowerSurge", "price": 102000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Nemesis", "price": 28000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Nightblade", "price": 60000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "PCJ 600", "price": 25000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Rat Bike", "price": 4500, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Ruffian", "price": 40000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Sanchez Couleur", "price": 25000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Sanchez", "price": 27000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Sanctus", "price": 95000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Sovereign", "price": 80000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Stryder", "price": 35000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Thrust", "price": 45000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Vader", "price": 45000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Vortex", "price": 60000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Wolfsbane", "price": 9500, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Zombie Bobber", "price": 34000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Zombie Chopper", "price": 35000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Manchez Scout", "price": 37000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Blazer", "price": 22000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Blazer Custom", "price": 20000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Blazer Street", "price": 25000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Reeveer", "price": 135000, "photo": "", "category": "Moto", "weight": 0},
+            {"brand": "N/A", "model": "Shinobite", "price": 145000, "photo": "", "category": "Moto", "weight": 0},
+        ];
+
+        function toggleAllVisibility(show) {
+            const containers = document.getElementsByClassName('grid-container');
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = show ? 'grid' : 'none';
+            }
+        }
+
+        function searchVehicles() {
+            let input = document.getElementById('searchBar').value.toLowerCase();
+            let gridContainers = document.getElementsByClassName('grid-container');
+            
+            for (let i = 0; i < gridContainers.length; i++) {
+                let vehicles = gridContainers[i].getElementsByClassName('grid-item');
+                
+                for (let j = 0; j < vehicles.length; j++) {
+                    let vehicle = vehicles[j];
+                    let model = vehicle.getElementsByTagName('h2')[0].innerText.toLowerCase();
+                    let brand = vehicle.getElementsByTagName('p')[1].innerText.toLowerCase();
+                    
+                    if (model.includes(input) || brand.includes(input)) {
+                        vehicle.style.display = "";
+                    } else {
+                        vehicle.style.display = "none";
+                    }
+                }
+            }
+        }
+
         function createVehicleCard(vehicle) {
             return `
                 <div class="grid-item">
@@ -573,50 +668,25 @@
             `;
         }
 
-        const gridContainerSedans = document.getElementById('grid-container-sedans');
-        dataSedans.forEach(vehicle => {
-            gridContainerSedans.innerHTML += createVehicleCard(vehicle);
-        });
+        function fillGridContainer(containerId, data) {
+            const gridContainer = document.getElementById(containerId);
+            data.forEach(vehicle => {
+                gridContainer.innerHTML += createVehicleCard(vehicle);
+            });
+        }
 
-        const gridContainerCoupes = document.getElementById('grid-container-coupes');
-        dataCoupes.forEach(vehicle => {
-            gridContainerCoupes.innerHTML += createVehicleCard(vehicle);
-        });
+        fillGridContainer('grid-container-sedans', dataSedans);
+        fillGridContainer('grid-container-coupes', dataCoupes);
+        fillGridContainer('grid-container-sportivesclassiques', dataSportivesClassiques);
+        fillGridContainer('grid-container-SUV', dataSUV);
+        fillGridContainer('grid-container-offroads', dataOffRoads);
+        fillGridContainer('grid-container-compacts', dataCompacts);
+        fillGridContainer('grid-container-muscles', dataMuscles);
+        fillGridContainer('grid-container-sport', dataSport);
+        fillGridContainer('grid-container-super', dataSuper);
+        fillGridContainer('grid-container-vans', dataVans);
+        fillGridContainer('grid-container-motos', dataMotos);
 
-        const gridContainerSportivesclassiques = document.getElementById('grid-container-sportivesclassiques');
-        dataSportivesClassiques.forEach(vehicle => {
-            gridContainerSportivesclassiques.innerHTML += createVehicleCard(vehicle);
-        });
-
-        const gridContainerSUV = document.getElementById('grid-container-SUV');
-        dataSUV.forEach(vehicle => {
-            gridContainerSUV.innerHTML += createVehicleCard(vehicle);
-        });
-
-        const gridContainerOffRoads = document.getElementById('grid-container-offroads');
-        dataOffRoads.forEach(vehicle => {
-            gridContainerOffRoads.innerHTML += createVehicleCard(vehicle);
-        });
-
-        const gridContainerCompacts = document.getElementById('grid-container-compacts');
-        dataCompacts.forEach(vehicle => {
-            gridContainerCompacts.innerHTML += createVehicleCard(vehicle);
-        });
-
-        const gridContainerMuscles = document.getElementById('grid-container-muscles');
-        dataMuscles.forEach(vehicle => {
-            gridContainerMuscles.innerHTML += createVehicleCard(vehicle);
-        });
-
-        const gridContainerSport = document.getElementById('grid-container-sport');
-        dataSport.forEach(vehicle => {
-            gridContainerSport.innerHTML += createVehicleCard(vehicle);
-        });
-
-        const gridContainerVans = document.getElementById('grid-container-vans');
-        dataVans.forEach(vehicle => {
-            gridContainerVans.innerHTML += createVehicleCard(vehicle);
-        });
 
 </script>
 </body>
