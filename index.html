@@ -7,6 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #282828;
         }
         .grid-container {
             grid-template-columns: repeat(6, 1fr);
@@ -19,6 +20,8 @@
             border: 1px solid #ccc;
             padding: 10px;
             text-align: center;
+            background-color: #ebebeb;
+            border-radius: 5px;
         }
         .grid-item img {
             max-width: 100%;
@@ -28,6 +31,36 @@
             display: block;
             margin: 10px 0;
         }
+        .pageTitle {
+            color: #ffca00;
+        }
+        .categoryTitle {
+            color: #e2842b;
+        }
+
+        #searchBar {
+            line-height: 2;
+            width: 80%;
+            border-radius: 3px;
+        }
+
+        .unfoldButton {
+            width: 8%;
+            line-height: 2;
+            background-color: #66cdaa;
+            border: 0px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .foldButton {
+            width: 8%;
+            line-height: 2;
+            background-color: #cd6666;
+            border: 0px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
     </style>
     <script>
         function toggleVisibility(id, btn) {
@@ -35,83 +68,87 @@
             if (container.style.display === "none" || container.style.display === "") {
                 container.style.display = "grid";
                 btn.innerText = "Cacher";
+                btn.classList.add("foldButton");
+                btn.classList.remove("unfoldButton");
             } else {
                 container.style.display = "none";
                 btn.innerText = "Afficher";
+                btn.classList.add("unfoldButton");
+                btn.classList.remove("foldButton");
             }
         }
 </script>
 </head>
 <body>
-    <h1>Catalogue de Véhicules</h1>
+    <h1 class="pageTitle">Catalogue de Véhicules</h1>
 
     <input type="text" id="searchBar" onkeyup="searchVehicles()" placeholder="Rechercher par marque ou modèle...">
 
-    <button class="toggle-all-btn" onclick="toggleAllVisibility(true)">Tout Déplier</button>
-    <button class="toggle-all-btn" onclick="toggleAllVisibility(false)">Tout Replier</button>
+    <button class="toggle-all-btn unfoldButton" onclick="toggleAllVisibility(true)">Tout Déplier</button>
+    <button class="toggle-all-btn foldButton" onclick="toggleAllVisibility(false)">Tout Replier</button>
     
-    <h2>Sedans</h2>
-    <button class="toggle-btn" onclick="toggleVisibility('grid-container-sedans', this)">Afficher</button>
+    <h2 class="categoryTitle">Sedans</h2>
+    <button class="toggle-btn unfoldButton" onclick="toggleVisibility('grid-container-sedans', this)">Afficher</button>
     <div class="grid-container" id="grid-container-sedans">
         <!-- Content for Sedans -->
     </div>
 
-    <h2>Coupés</h2>
-    <button class="toggle-btn" onclick="toggleVisibility('grid-container-coupes', this)">Afficher</button>
+    <h2 class="categoryTitle">Coupés</h2>
+    <button class="toggle-btn unfoldButton" onclick="toggleVisibility('grid-container-coupes', this)">Afficher</button>
     <div class="grid-container" id="grid-container-coupes">
         <!-- Content for Coupés -->
     </div>
 
-    <h2>Sportives Classiques</h2>
-    <button class="toggle-btn" onclick="toggleVisibility('grid-container-sportivesclassiques', this)">Afficher</button>
+    <h2 class="categoryTitle">Sportives Classiques</h2>
+    <button class="toggle-btn unfoldButton" onclick="toggleVisibility('grid-container-sportivesclassiques', this)">Afficher</button>
     <div class="grid-container" id="grid-container-sportivesclassiques">
         <!-- Content for Sportives Classiques -->
     </div>
 
-    <h2>SUV</h2>
-    <button class="toggle-btn" onclick="toggleVisibility('grid-container-SUV', this)">Afficher</button>
+    <h2 class="categoryTitle">SUV</h2>
+    <button class="toggle-btn unfoldButton" onclick="toggleVisibility('grid-container-SUV', this)">Afficher</button>
     <div class="grid-container" id="grid-container-SUV">
         <!-- Content for SUV -->
     </div>
 
-    <h2>Off Roads</h2>
-    <button class="toggle-btn" onclick="toggleVisibility('grid-container-offroads', this)">Afficher</button>
+    <h2 class="categoryTitle">Off Roads</h2>
+    <button class="toggle-btn unfoldButton" onclick="toggleVisibility('grid-container-offroads', this)">Afficher</button>
     <div class="grid-container" id="grid-container-offroads">
         <!-- Content for Off Roads -->
     </div>
 
-    <h2>Compacts</h2>
-    <button class="toggle-btn" onclick="toggleVisibility('grid-container-compacts', this)">Afficher</button>
+    <h2 class="categoryTitle">Compacts</h2>
+    <button class="toggle-btn unfoldButton" onclick="toggleVisibility('grid-container-compacts', this)">Afficher</button>
     <div class="grid-container" id="grid-container-compacts">
         <!-- Content for Compacts -->
     </div>
 
-    <h2>Muscles</h2>
-    <button class="toggle-btn" onclick="toggleVisibility('grid-container-muscles', this)">Afficher</button>
+    <h2 class="categoryTitle">Muscles</h2>
+    <button class="toggle-btn unfoldButton" onclick="toggleVisibility('grid-container-muscles', this)">Afficher</button>
     <div class="grid-container" id="grid-container-muscles">
         <!-- Content for Muscles -->
     </div>
 
-    <h2>Super</h2>
-    <button class="toggle-btn" onclick="toggleVisibility('grid-container-super', this)">Afficher</button>
+    <h2 class="categoryTitle">Super</h2>
+    <button class="toggle-btn unfoldButton" onclick="toggleVisibility('grid-container-super', this)">Afficher</button>
     <div class="grid-container" id="grid-container-super">
         <!-- Content for Super -->
     </div>
 
-    <h2>Sport</h2>
-    <button class="toggle-btn" onclick="toggleVisibility('grid-container-sport', this)">Afficher</button>
+    <h2 class="categoryTitle">Sport</h2>
+    <button class="toggle-btn unfoldButton" onclick="toggleVisibility('grid-container-sport', this)">Afficher</button>
     <div class="grid-container" id="grid-container-sport">
         <!-- Content for Sport -->
     </div>
 
-    <h2>Vans</h2>
-    <button class="toggle-btn" onclick="toggleVisibility('grid-container-vans', this)">Afficher</button>
+    <h2 class="categoryTitle">Vans</h2>
+    <button class="toggle-btn unfoldButton" onclick="toggleVisibility('grid-container-vans', this)">Afficher</button>
     <div class="grid-container" id="grid-container-vans">
         <!-- Content for Vans -->
     </div>
 
-    <h2>Motos</h2>
-    <button class="toggle-btn" onclick="toggleVisibility('grid-container-motos', this)">Afficher</button>
+    <h2 class="categoryTitle">Motos</h2>
+    <button class="toggle-btn unfoldButton" onclick="toggleVisibility('grid-container-motos', this)">Afficher</button>
     <div class="grid-container" id="grid-container-motos">
         <!-- Content for Motos -->
     </div>
