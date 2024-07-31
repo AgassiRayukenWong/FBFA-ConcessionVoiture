@@ -64,6 +64,22 @@
         }
     </style>
     <script>
+
+        function updateToggleButtons(show) {
+            const toggleBtns = document.getElementsByClassName('toggle-btn');
+            for (let i = 0; i < toggleBtns.length; i++) {
+                const btn = toggleBtns[i];
+                btn.innerText = show ? "Cacher" : "Afficher";
+                if (show) {
+                    btn.classList.add("foldButton");
+                    btn.classList.remove("unfoldButton");
+                } else {
+                    btn.classList.add("unfoldButton");
+                    btn.classList.remove("foldButton");
+                }
+            }
+        }
+
         function toggleVisibility(id, btn) {
             const container = document.getElementById(id);
             if (container.style.display === "none" || container.style.display === "") {
@@ -77,6 +93,7 @@
                 btn.classList.add("unfoldButton");
                 btn.classList.remove("foldButton");
             }
+            updateToggleButtons(container.style.display === "grid");
         }
 </script>
 </head>
@@ -676,6 +693,7 @@
             for (let i = 0; i < containers.length; i++) {
                 containers[i].style.display = show ? 'grid' : 'none';
             }
+            updateToggleButtons(show);
         }
 
         function searchVehicles() {
